@@ -2,7 +2,7 @@
 CREATE TABLE Employee (
     id_emp VARCHAR(5),
     name_emp VARCHAR(50),
-    age INT
+    age int
 );
 
 -- Menampilkan tabel yang telah dibuat
@@ -19,6 +19,23 @@ SELECT * FROM Employee;
 UPDATE Employee
 SET name_emp = 'Dani', age = 23
 WHERE id_emp = '234';
+
+-- Latihan menjalankan perintah SQL (3)
+-- Buat id_emp pada table Employee menjadi Primary Key dg perintah ALTER TABLE
+Tampilkan struktur table Employee 
+ALTER TABLE Employee
+ADD PRIMARY KEY (id_Emp);
+
+-- Tampilkan struktur table Employee 
+DESCRIBE employee;
+
+-- Tambahkan data berikut 
+INSERT INTO Employee (id_emp, name_emp, age)
+VALUES ('123', "Arief", 24);
+
+-- Apa yang terjadi? Apa kesimpulan yang bisa didapat?
+Error Code: 1062. Duplicate entry '123' for key 'employee.PRIMARY'
+"PRIMARY KEY membuat data pada id_emp tidak bisa memiliki duplikat"
 
 -- Latihan SQL (3): Menjadikan id_emp sebagai Primary Key
 ALTER TABLE Employee
